@@ -13,9 +13,10 @@ import {
   Right,
   List,
   ListItem,
+  StyleSheet, 
   View
 } from "native-base";
-import { VictoryLine } from 'victory';
+import { VictoryLine, VictoryBar, VictoryChart, VictoryTheme  } from 'victory-native';
 
 import styles from "./styles";
 export interface Props {
