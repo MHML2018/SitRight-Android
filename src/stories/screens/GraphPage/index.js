@@ -16,7 +16,6 @@ import {
   StyleSheet, 
   View
 } from "native-base";
-import { VictoryLine, VictoryBar, VictoryChart, VictoryTheme  } from 'victory-native';
 
 import styles from "./styles";
 export interface Props {
@@ -45,9 +44,7 @@ class GraphPage extends React.Component<Props, State> {
           <Right />
         </Header>
         <Content>
-            <VictoryChart>
-               <VictoryLine data={this.props.data} />
-            </VictoryChart>
+            <Image style={{width:300, height:300}} source={require('../../../../assets/graph.png')} />
         </Content>
       </Container>
     );
