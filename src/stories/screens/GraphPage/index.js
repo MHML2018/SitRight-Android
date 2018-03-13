@@ -54,4 +54,4 @@ class GraphPage extends React.Component<Props, State> {
   }
 }
 
-export default Home;
+export default GraphPage;
