@@ -19,14 +19,32 @@ class ScorePage extends React.Component<Props, State> {
 					</Left>
 
 					<Body style={{ flex: 3 }}>
-						<Title>{param ? param.name.item : "Your Past Postures"}</Title>
+						<Title>{param ? param.name.item : "Your Badges"}</Title>
 					</Body>
 
 					<Right />
 				</Header>
 
 				<Content padder>
-					<Text>{param !== undefined ? param.name.item : "Nothing to show yet..."}</Text>
+               <View style={{flex:1}}>
+                  <View style={{flex:1, flexDirection: row}}>
+                     <Image style={{width: 200, height: 200}} source={require('../../../../assets/login_medal.png')} />
+                     <Text>You have logged in 36 days in a row!</Text>
+                  </View>
+                  <View style={{flex:1, flexDirection: row}}>
+                     <Image style={{width: 200, height: 200}} source={require('../../../../assets/friend_medal.png')} />
+                     <Text>You have the longest streak of your friends</Text>
+                  </View>
+                  <View style={{flex:1, flexDirection: row}}>
+                     <Image style={{width: 200, height: 200}} source={require('../../../../assets/target_met.png')} />
+                     <Text>You met your score target for this week</Text>
+                  </View>
+                  <View style={{flex:1, flexDirection: row}}>
+                     <Image style={{width: 200, height: 200}} source={require('../../../../assets/top_score.png')} />
+                     <Text>You currently have the highest score of your friends</Text>
+                  </View>
+               </View>
+					//<Text>{param !== undefined ? param.name.item : "Nothing to show yet..."}</Text>
 				</Content>
 			</Container>
 		);
